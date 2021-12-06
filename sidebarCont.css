@@ -1,0 +1,16 @@
+body {
+  background-color: rgb(233, 233, 233);
+  height: 100%;
+  width: 100%;
+  border: rgb(0, 0, 0);
+  margin: 0;
+  margin-top: 3rem;
+}
+
+#block {
+  background-color: rgb(224, 224, 224);
+
+  border: 0.2rem solid black;
+
+  text-align: center;
+}
