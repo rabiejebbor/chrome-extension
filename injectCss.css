@@ -1,0 +1,12 @@
+.highlight_this_element {
+  background-color: aqua !important ;
+  color: rgb(255, 0, 0) !important ;
+}
+
+/* body {
+  background-color: burlywood;
+} */
+.crx_mouse_visited {
+  background-color: #bcd5eb !important;
+  outline: 1px solid #5166bb !important;
+}

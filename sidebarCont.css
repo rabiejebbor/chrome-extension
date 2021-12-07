@@ -7,10 +7,13 @@ body {
   margin-top: 3rem;
 }
 
-#block {
+.draggable {
   background-color: rgb(224, 224, 224);
-
   border: 0.2rem solid black;
-
   text-align: center;
+  cursor: move;
+}
+
+.draggable.dragging {
+  opacity: 0.5;
 }
