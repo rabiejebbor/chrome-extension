@@ -1,12 +1,16 @@
-.highlight_this_element {
-  background-color: aqua !important ;
-  color: rgb(255, 0, 0) !important ;
-}
-
 /* body {
   background-color: burlywood;
 } */
 .crx_mouse_visited {
   background-color: #bcd5eb !important;
   outline: 1px solid #5166bb !important;
+}
+.popup_active {
+  background-color: rgb(190, 190, 190) !important ;
+  color: rgb(88, 88, 88) !important ;
+  padding: 2rem;
+  /* position: absolute; */
+  bottom: 0;
+  left: 50%;
+  z-index: 50;
 }

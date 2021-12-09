@@ -1,6 +1,6 @@
 const iframe = document.createElement("iframe");
 iframe.style.height = "100%";
-iframe.style.width = "400px";
+iframe.style.width = "200px";
 iframe.style.position = "fixed";
 iframe.style.top = "0px";
 iframe.style.right = "0px";
