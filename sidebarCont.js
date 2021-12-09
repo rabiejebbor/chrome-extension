@@ -15,9 +15,6 @@ draggables.forEach((draggable) => {
 document.addEventListener("dragover", (e) => {
   e.preventDefault;
   console.log("gragging over document");
-  chrome.storage.sync.get("color", ({ color }) => {
-    console.log("gragging ", color);
-  });
 });
 
 // adding element to sidebar on change

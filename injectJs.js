@@ -109,13 +109,15 @@ function addElementToSidebar(element) {
 
 //communication between iframe and dom (find better way)
 //this aproach has a write limit per min
-//for now only works with elements with classname
+//for now only works with elements with classname or id
 chrome.storage.onChanged.addListener(function (changes, namespace) {
   console.log("changes on Injectjs", changes);
   for (let [key, { oldValue, newValue }] of Object.entries(changes)) {
     if (key === "toHighlight") {
       const { tagName, className, id } = newValue;
-      const target = document.getElementsByClassName(className)[0];
+      const target =
+        document.getElementsByClassName(className)[0] ||
+        document.getElementById(id);
       console.log("target on Injectjs", target);
       target.classList.add(MOUSE_VISITED_CLASSNAME);
     }
@@ -123,7 +125,9 @@ chrome.storage.onChanged.addListener(function (changes, namespace) {
       const { tagName, className, id } = newValue;
       // className = className.replaceAll(" ", ".");
       // const target = document.querySelector(`.${className}`);
-      const target = document.getElementsByClassName(className)[0];
+      const target =
+        document.getElementsByClassName(className)[0] ||
+        document.getElementById(id);
       console.log("target on Injectjs", target);
       target.classList.remove(MOUSE_VISITED_CLASSNAME);
     }
