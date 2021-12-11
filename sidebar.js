@@ -24,7 +24,12 @@ chrome.runtime.onMessage.addListener(function (msg, sender) {
 
 function toggle() {
   if (document.body.querySelector("#sidebarCont")) {
-    document.body.removeChild(iframe);
+    if (iframe.style.display === "none") {
+      iframe.style.display = "";
+    } else {
+      iframe.style.display = "none";
+      //stop the extesion functionalities
+    }
   } else {
     document.body.appendChild(iframe);
   }
